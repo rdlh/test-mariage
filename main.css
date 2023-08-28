@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+    box-sizing: inherit;
+    font-family: 'Nunito', sans-serif;
+    }
+
+    body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    border: 2px solid white;
+    }
+    .container .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 900px 100%;
+    }
+    .container .foreground-img {
+        background-image: url("/images/1_1.jpg");
+        width: 50%;
+    }
+    .container .slider {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 242, 242, 0.0);
+    outline: none;
+    margin: 0;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .container .slider:hover {
+    /* background: rgba(242, 242, 242, 0.0); */
+    }
+    .container .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+    }
+    .container .slider::-moz-range-thumb {
+    width: 6px;
+    height: 600px;
+    background: white;
+    cursor: pointer;
+    }
+    .container .slider-button {
+    pointer-events: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    left: calc(50% - 18px);
+    top: calc(50% - 18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .container .slider-button:after {
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: solid #5D5D5D;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    }
+    .container .slider-button:before {
+    content: "";
+    padding: 3px;
+    display: inline-block;
+    border: solid #5D5D5D;
+    border-width: 0 2px 2px 0;
+    transform: rotate(135deg);
+    }
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 20px;
+    background-color: #dd7973;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav a.selected {
+    background-color: #cf453c;
+}
