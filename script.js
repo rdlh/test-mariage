@@ -1,16 +1,17 @@
-$("#slider").on("input change", e => {
-    const sliderPos = e.target.value / 10;
-    $('.foreground-img').css('width', `${sliderPos}%`);
-    $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`);
-});
+for(i = 1; i < 80; i++) {
+    var elem = document.createElement('a')
+    elem.className = 'grid-item'
+    elem.setAttribute('data-lightbox', 'wedding')
+    elem.setAttribute('href', `/images/${i}.jpg`)
+    elem.innerHTML = `<img src="/images/thumbs/${i}.jpg" />`
+    document.querySelector('.grid').appendChild(elem)
+}
 
-$('.nav a').on('click', e => {
-    e.preventDefault();
-    
-    $('.nav a.selected').removeClass('selected');
-    $(e.target).addClass('selected');
+// On all images are loaded, initialize Masonry
 
-    const id = $(e.target).attr('id');
-
-    $('.background-img').css('background-image', `url(./images/${id}.jpg)`);
-})
+setTimeout(function() {
+    imagesLoaded(document.querySelector('.grid'), function() {
+        var elem = document.querySelector('.grid')
+        var msnry = new Masonry(elem, { })
+    });
+}, 100)

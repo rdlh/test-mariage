@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preset Mariage</title>
+    <title>Mariage de Lëa & Quentin</title>
 
+    <link rel="icon" href="/heart.png" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-    <div class="nav">
-        <a id="1_2" class="selected">Preset 1</a>
-        <a id="1_3">Preset 2</a>
-        <a id="1_4">Preset 3</a>
-        <a id="1_5">Preset 4</a>
-    </div>
-    <div class='container'>
-        <div style="position: absolute; top: -30px; left: 30px; font-weight: 700;">
-            Avant
+    <header>
+        <div class="heart">
+            <h1>Lëa & Quentin</h1>
+            <h2>29 juillet 2023</h2>
         </div>
-        <div style="position: absolute; top: -30px; right: 30px; font-weight: 700;">
-            Après
-        </div>
-        <div>
-            <div class='img background-img' style='background-image: url("/images/1_2.jpg");'></div>
-            <div class='img foreground-img'></div>
-            <input type="range" min="1" max="1000" value="500" class="slider" name='slider' id="slider">
-            <div class='slider-button'></div>
-        </div>
+    </header>
+
+    <div class="grid">
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="/lightbox.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src='/script.js'></script>
 </body>
 </html>
