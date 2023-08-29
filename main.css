@@ -71,6 +71,17 @@ header .heart {
     border-radius: 6px;
 }
 
+@media (max-width: 720px) {
+    .grid {
+        max-width: calc(100% - 20px);
+        margin-top: 25px;
+    }
+
+    .grid-item {
+        width: 50%;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
