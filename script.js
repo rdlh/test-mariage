@@ -1,4 +1,4 @@
-for(i = 1; i < 80; i++) {
+for(i = 1; i < 82; i++) {
     var elem = document.createElement('a')
     elem.className = 'grid-item'
     elem.setAttribute('data-lightbox', 'wedding')
